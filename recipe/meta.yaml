@@ -24,6 +24,7 @@ requirements:
 
   run:
     - python
+    - win_inet_pton  # [win]
 
 test:
   imports:
