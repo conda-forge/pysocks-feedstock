@@ -1,9 +1,9 @@
-{%set name = "PySocks" %}
-{%set version = "1.6.7" %}
-{%set compress_type= "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "d00329f27efa157db7efe3ca26fcd69033cd61f83822461ee3f8a353b48e33cf" %}
-{%set build_num = "0" %}
+{% set name = "PySocks" %}
+{% set version = "1.6.7" %}
+{% set compress_type= "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "d00329f27efa157db7efe3ca26fcd69033cd61f83822461ee3f8a353b48e33cf" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -12,15 +12,16 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build_num }}
-  script: python setup.py install
+  number: {{ build }}
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - python
+    - setuptools
 
   run:
     - python
@@ -32,8 +33,8 @@ test:
 
 about:
   home: https://github.com/Anorov/PySocks
-  license: BSD 3-Clause
   license_file: LICENSE
+  license: BSD 3-Clause
   summary: 'A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.'
   license_family: BSD
   doc_url: https://github.com/Anorov/PySocks/blob/master/README.md
