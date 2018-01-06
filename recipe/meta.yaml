@@ -1,8 +1,8 @@
 {% set name = "PySocks" %}
-{% set version = "1.6.7" %}
+{% set version = "1.6.8" %}
 {% set compress_type= "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "d00329f27efa157db7efe3ca26fcd69033cd61f83822461ee3f8a353b48e33cf" %}
+{% set hash = "3fe52c55890a248676fd69dc9e3c4e811718b777834bcaab7a8125cf9deac672" %}
 {% set build = 0 %}
 
 package:
