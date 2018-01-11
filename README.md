@@ -14,7 +14,9 @@ Summary: A Python SOCKS client module. See https://github.com/Anorov/PySocks for
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pysocks-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pysocks-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pysocks-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pysocks-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pysocks-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pysocks-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pysocks-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pysocks-feedstock/branch/master)
 
 Current release info
 ====================
