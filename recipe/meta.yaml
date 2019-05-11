@@ -1,4 +1,4 @@
-{% set version = "1.6.8" %}
+{% set version = "1.7.0" %}
 
 package:
   name: pysocks
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/P/PySocks/PySocks-{{ version }}.tar.gz
-  sha256: 3fe52c55890a248676fd69dc9e3c4e811718b777834bcaab7a8125cf9deac672
+  sha256: d9031ea45fdfacbe59a99273e9f0448ddb33c1580fe3831c1b09557c5718977c
 
 build:
-  number: 1002
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
