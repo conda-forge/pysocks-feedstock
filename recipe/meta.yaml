@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: pysocks
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/P/PySocks/PySocks-{{ version }}.tar.gz
-  sha256: d9031ea45fdfacbe59a99273e9f0448ddb33c1580fe3831c1b09557c5718977c
+  sha256: 3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0
 
 build:
   number: 0
