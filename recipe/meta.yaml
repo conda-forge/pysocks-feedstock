@@ -20,7 +20,7 @@ requirements:
   run:
     - python >=3.8
     - {{ virtual_pkg|default("__unix") }}
-  {% if noarch_platform == "win" %}
+  {% if virtual_pkg == "__win" %}
     - win_inet_pton
   {% endif %}
 
