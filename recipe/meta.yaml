@@ -15,11 +15,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
-    - {{ virtual_pkg }}
+    - python >=3.8
+    - {{ virtual_pkg|default("__unix") }}
   {% if noarch_platform == "win" %}
     - win_inet_pton
   {% endif %}
@@ -31,7 +31,7 @@ test:
 about:
   home: https://github.com/Anorov/PySocks
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   summary: 'A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.'
   license_family: BSD
   doc_url: https://github.com/Anorov/PySocks/blob/master/README.md
