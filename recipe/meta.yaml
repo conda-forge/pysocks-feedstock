@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - {{ virtual_package }}
+    - {{ virtual_pkg }}
   {% if noarch_platform == "win" %}
     - win_inet_pton
   {% endif %}
