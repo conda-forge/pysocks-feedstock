@@ -1,0 +1,3 @@
+virtual_pkg:
+  - __unix  # [unix]
+  - __win   # [win]

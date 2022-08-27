@@ -9,19 +9,20 @@ source:
   sha256: 3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0
 
 build:
-  number: 5
+  number: 6
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
-    - win_inet_pton  # [win]
+    - python >=3.8
+    - {{ virtual_pkg|default("__unix") }}
+  {% if virtual_pkg == "__win" %}
+    - win_inet_pton
+  {% endif %}
 
 test:
   imports:
@@ -30,7 +31,7 @@ test:
 about:
   home: https://github.com/Anorov/PySocks
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   summary: 'A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.'
   license_family: BSD
   doc_url: https://github.com/Anorov/PySocks/blob/master/README.md
