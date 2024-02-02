@@ -9,7 +9,7 @@ source:
   sha256: 3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0
 
 build:
-  number: 6
+  number: 7
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   noarch: python
 
@@ -19,10 +19,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - {{ virtual_pkg|default("__unix") }}
-  {% if virtual_pkg == "__win" %}
     - win_inet_pton
-  {% endif %}
 
 test:
   imports:
