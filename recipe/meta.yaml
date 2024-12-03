@@ -10,12 +10,13 @@ source:
 
 build:
   number: 7
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
   noarch: python
 
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
   run:
     - python >={{ python_min }}
